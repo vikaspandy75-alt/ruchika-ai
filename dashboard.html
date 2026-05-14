@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0"/>
+
+<title>Ruchika AI Dashboard</title>
+
+<link rel="stylesheet"
+href="css/style.css"/>
+
+<link rel="stylesheet"
+href="css/animations.css"/>
+
+<link rel="stylesheet"
+href="css/robot.css"/>
+
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<div class="glass-card">
+
+<h1 class="logo">
+Ruchika AI
+</h1>
+
+<p class="tagline">
+What shall we create today?
+</p>
+
+<div class="ai-orb"></div>
+
+<h2
+style="
+margin-top:25px;
+text-align:center;
+font-size:22px;
+"
+id="welcomeName">
+Welcome
+</h2>
+
+<button
+class="btn btn-primary"
+onclick="
+window.location.href=
+'chat.html'
+">
+Start Chatting
+</button>
+
+<button
+class="btn btn-pink"
+id="upgradeBtn">
+Upgrade Premium
+</button>
+
+<button
+class="btn btn-secondary"
+onclick="
+window.location.href=
+'tools.html'
+">
+AI Tools
+</button>
+
+<button
+class="btn btn-secondary"
+onclick="
+window.location.href=
+'settings.html'
+">
+Settings
+</button>
+
+</div>
+
+</div>
+
+<!-- Bottom Navigation -->
+
+<div class="bottom-nav">
+
+<a href="dashboard.html"
+class="nav-btn">
+Home
+</a>
+
+<a href="chat.html"
+class="nav-btn">
+Chat
+</a>
+
+<a href="tools.html"
+class="nav-btn">
+Tools
+</a>
+
+<a href="profile.html"
+class="nav-btn">
+Profile
+</a>
+
+</div>
+
+<script>
+
+// Welcome Name
+const username =
+localStorage.getItem(
+"ruchika_username"
+);
+
+document.getElementById(
+"welcomeName"
+).innerText =
+`Welcome, ${username}`;
+
+// Stars
+const stars =
+document.getElementById(
+"stars"
+);
+
+for(let i=0;i<80;i++){
+
+const star =
+document.createElement("div");
+
+star.classList.add("star");
+
+star.style.left =
+Math.random()*100+"%";
+
+star.style.top =
+Math.random()*100+"%";
+
+star.style.animationDuration =
+(Math.random()*3+2)+"s";
+
+stars.appendChild(star);
+
+}
+
+// Upgrade Button
+document.getElementById(
+"upgradeBtn"
+).addEventListener(
+"click",
+()=>{
+
+alert(
+`Premium Upgrade
+
+₹99/month
+₹799/year
+
+UPI:
+8745899251-2@ybl
+
+Telegram:
+@HIMANSHU_PAPA_BOL
+
+Support:
+ruhiminnovations@gmail.com`
+);
+
+}
+);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+/* ===================================
+   RUCHIKA AI — STYLE.CSS
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+--bg:#07041a;
+--purple:#8A2FFF;
+--cyan:#00D4FF;
+--pink:#FF6B9D;
+--green:#4ade80;
+--white:#ffffff;
+--glass:rgba(255,255,255,0.06);
+--border:rgba(255,255,255,0.1);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+-webkit-tap-highlight-color:transparent;
+}
+
+body{
+background:var(--bg);
+color:var(--white);
+overflow-x:hidden;
+min-height:100vh;
+position:relative;
+}
+
+/* ===================================
+BACKGROUND
+=================================== */
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:
+radial-gradient(circle at top left,#8A2FFF33,transparent 25%),
+radial-gradient(circle at bottom right,#00D4FF22,transparent 25%),
+radial-gradient(circle at center,#FF6B9D11,transparent 35%);
+z-index:-2;
+}
+
+/* ===================================
+TWINKLE STARS
+=================================== */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+overflow:hidden;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:#fff;
+border-radius:50%;
+animation:twinkle 3s infinite ease-in-out;
+opacity:.7;
+}
+
+@keyframes twinkle{
+0%,100%{
+opacity:.2;
+transform:scale(1);
+}
+50%{
+opacity:1;
+transform:scale(1.5);
+}
+}
+
+/* ===================================
+CONTAINER
+=================================== */
+
+.container{
+width:92%;
+max-width:430px;
+margin:auto;
+padding:25px;
+}
+
+/* ===================================
+GLASS CARD
+=================================== */
+
+.glass-card{
+background:var(--glass);
+backdrop-filter:blur(20px);
+border:1px solid var(--border);
+border-radius:28px;
+padding:20px;
+box-shadow:
+0 0 25px rgba(138,47,255,.15),
+0 0 45px rgba(0,212,255,.08);
+}
+
+/* ===================================
+LOGO
+=================================== */
+
+.logo{
+font-size:40px;
+font-weight:800;
+text-align:center;
+background:linear-gradient(
+90deg,
+var(--purple),
+var(--cyan),
+var(--pink)
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:10px;
+}
+
+/* ===================================
+TAGLINE
+=================================== */
+
+.tagline{
+text-align:center;
+font-size:14px;
+opacity:.75;
+margin-bottom:30px;
+}
+
+/* ===================================
+BUTTONS
+=================================== */
+
+.btn{
+width:100%;
+padding:16px;
+border:none;
+outline:none;
+border-radius:18px;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+margin-top:15px;
+position:relative;
+overflow:hidden;
+}
+
+.btn:active{
+transform:scale(.96);
+}
+
+.btn-primary{
+background:linear-gradient(
+90deg,
+var(--purple),
+var(--cyan)
+);
+color:white;
+box-shadow:0 0 25px rgba(138,47,255,.45);
+}
+
+.btn-secondary{
+background:rgba(255,255,255,.06);
+color:white;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.btn-pink{
+background:linear-gradient(
+90deg,
+var(--pink),
+var(--purple)
+);
+color:white;
+}
+
+/* ===================================
+INPUTS
+=================================== */
+
+.input{
+width:100%;
+padding:16px;
+border:none;
+outline:none;
+border-radius:18px;
+margin-top:18px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+color:white;
+font-size:15px;
+}
+
+.input::placeholder{
+color:rgba(255,255,255,.45);
+}
+
+/* ===================================
+AI ORB
+=================================== */
+
+.ai-orb{
+width:140px;
+height:140px;
+margin:auto;
+border-radius:50%;
+background:
+radial-gradient(circle,var(--cyan),var(--purple));
+position:relative;
+box-shadow:
+0 0 40px var(--purple),
+0 0 80px var(--cyan);
+animation:float 4s ease-in-out infinite;
+}
+
+.ai-orb::before{
+content:'';
+position:absolute;
+inset:-8px;
+border-radius:50%;
+padding:4px;
+background:linear-gradient(
+90deg,
+var(--purple),
+var(--cyan),
+var(--pink)
+);
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite:xor;
+mask-composite:exclude;
+animation:spin 5s linear infinite;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-12px);
+}
+}
+
+/* ===================================
+BOTTOM NAV
+=================================== */
+
+.bottom-nav{
+position:fixed;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+width:92%;
+max-width:430px;
+display:flex;
+justify-content:space-around;
+padding:15px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+z-index:999;
+}
+
+.nav-btn{
+color:white;
+text-decoration:none;
+font-size:13px;
+opacity:.75;
+transition:.3s;
+}
+
+.nav-btn:hover{
+opacity:1;
+color:var(--cyan);
+}
+
+/* ===================================
+LOADER
+=================================== */
+
+.loader{
+width:65px;
+height:65px;
+border-radius:50%;
+border:5px solid rgba(255,255,255,.08);
+border-top-color:var(--cyan);
+animation:rotate 1s linear infinite;
+margin:auto;
+}
+
+@keyframes rotate{
+100%{
+transform:rotate(360deg);
+}
+}
+
+/* ===================================
+MESSAGE BOX
+=================================== */
+
+.chat-box{
+padding-bottom:120px;
+}
+
+.message{
+padding:14px;
+margin-top:15px;
+border-radius:18px;
+font-size:14px;
+line-height:1.6;
+max-width:85%;
+word-wrap:break-word;
+animation:fadeUp .4s ease;
+}
+
+.user-message{
+background:linear-gradient(
+90deg,
+var(--purple),
+var(--cyan)
+);
+margin-left:auto;
+color:white;
+}
+
+.ai-message{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.08);
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===================================
+VOICE BUTTON
+=================================== */
+
+.voice-btn{
+position:fixed;
+bottom:90px;
+left:50%;
+transform:translateX(-50%);
+width:75px;
+height:75px;
+border-radius:50%;
+border:none;
+background:linear-gradient(
+90deg,
+var(--purple),
+var(--cyan)
+);
+color:white;
+font-size:26px;
+box-shadow:
+0 0 30px var(--purple),
+0 0 60px var(--cyan);
+animation:pulse 2s infinite;
+z-index:999;
+}
+
+@keyframes pulse{
+0%{
+transform:translateX(-50%) scale(1);
+}
+50%{
+transform:translateX(-50%) scale(1.08);
+}
+100%{
+transform:translateX(-50%) scale(1);
+}
+}
+
+/* ===================================
+ONLINE / OFFLINE DOT
+=================================== */
+
+.status-dot{
+position:fixed;
+top:15px;
+right:15px;
+width:14px;
+height:14px;
+border-radius:50%;
+background:var(--green);
+box-shadow:0 0 15px var(--green);
+z-index:999;
+}
+
+.status-dot.offline{
+background:red;
+box-shadow:0 0 15px red;
+}
+
+/* ===================================
+SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+width:5px;
+}
+
+::-webkit-scrollbar-thumb{
+background:var(--purple);
+border-radius:20px;
+}
+
+/* ===================================
+RESPONSIVE
+=================================== */
+
+@media(max-width:480px){
+
+.logo{
+font-size:34px;
+}
+
+.container{
+padding:18px;
+}
+
+.btn{
+padding:15px;
+}
+
+}

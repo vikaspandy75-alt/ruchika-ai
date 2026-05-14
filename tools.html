@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+
+<meta
+name="viewport"
+content="width=device-width,
+initial-scale=1.0"/>
+
+<title>Ruchika AI Tools</title>
+
+<link rel="stylesheet"
+href="css/style.css"/>
+
+<style>
+
+.tools-grid{
+display:grid;
+grid-template-columns:
+repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.tool-card{
+padding:18px;
+border-radius:22px;
+background:
+rgba(255,255,255,.06);
+
+border:
+1px solid
+rgba(255,255,255,.08);
+
+backdrop-filter:
+blur(20px);
+
+transition:.3s;
+cursor:pointer;
+}
+
+.tool-card:hover{
+transform:translateY(-5px);
+box-shadow:
+0 0 20px
+rgba(138,47,255,.3);
+}
+
+.tool-icon{
+font-size:35px;
+margin-bottom:10px;
+}
+
+.tool-title{
+font-size:15px;
+font-weight:600;
+}
+
+.tool-status{
+font-size:12px;
+opacity:.7;
+margin-top:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<h1 class="logo">
+AI Tools
+</h1>
+
+<p class="tagline">
+50+ AI Tools Directory
+</p>
+
+<div class="tools-grid">
+
+<div class="tool-card">
+<div class="tool-icon">🤖</div>
+<div class="tool-title">
+GPT-4o
+</div>
+<div class="tool-status">
+PAID
+</div>
+</div>
+
+<div class="tool-card">
+<div class="tool-icon">🧠</div>
+<div class="tool-title">
+Claude 3.7
+</div>
+<div class="tool-status">
+PAID
+</div>
+</div>
+
+<div class="tool-card">
+<div class="tool-icon">⚡</div>
+<div class="tool-title">
+Gemini 1.5
+</div>
+<div class="tool-status">
+FREE
+</div>
+</div>
+
+<div class="tool-card">
+<div class="tool-icon">💻</div>
+<div class="tool-title">
+DeepSeek
+</div>
+<div class="tool-status">
+FREE
+</div>
+</div>
+
+<div class="tool-card">
+<div class="tool-icon">🎨</div>
+<div class="tool-title">
+Image Generator
+</div>
+<div class="tool-status">
+FREE
+</div>
+</div>
+
+<div class="tool-card">
+<div class="tool-icon">🎤</div>
+<div class="tool-title">
+Voice AI
+</div>
+<div class="tool-status">
+ACTIVE
+</div>
+</div>
+
+<div class="tool-card">
+<div class="tool-icon">📄</div>
+<div class="tool-title">
+PDF Tools
+</div>
+<div class="tool-status">
+FREE
+</div>
+</div>
+
+<div class="tool-card">
+<div class="tool-icon">🚀</div>
+<div class="tool-title">
+Startup Generator
+</div>
+<div class="tool-status">
+AI POWERED
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// Stars
+const stars =
+document.getElementById(
+"stars"
+);
+
+for(let i=0;i<80;i++){
+
+const star =
+document.createElement("div");
+
+star.classList.add("star");
+
+star.style.left =
+Math.random()*100+"%";
+
+star.style.top =
+Math.random()*100+"%";
+
+stars.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>

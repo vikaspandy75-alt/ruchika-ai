@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "720016059839",
+    "project_id": "ruchika-ai-cfea7",
+    "storage_bucket": "ruchika-ai-cfea7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720016059839:android:dddb8a7ab34346d142c50a",
+        "android_client_info": {
+          "package_name": "com.ruchika.ai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720016059839-8akkp0q6t8kbrclu8u6l35093k362nud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARh_xfcFSz9ZLOOswrlFhPxFxd3ssXKrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720016059839-8akkp0q6t8kbrclu8u6l35093k362nud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

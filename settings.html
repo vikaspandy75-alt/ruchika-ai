@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+
+<meta
+name="viewport"
+content="width=device-width,
+initial-scale=1.0"/>
+
+<title>Ruchika AI Settings</title>
+
+<link rel="stylesheet"
+href="css/style.css"/>
+
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<div class="glass-card">
+
+<h1 class="logo">
+Settings
+</h1>
+
+<p class="tagline">
+Customize your AI experience
+</p>
+
+<!-- Theme -->
+
+<label>Theme Color</label>
+
+<select
+class="input"
+id="themeSelect">
+
+<option value="#8A2FFF">
+Purple
+</option>
+
+<option value="#00D4FF">
+Cyan
+</option>
+
+<option value="#FF6B9D">
+Pink
+</option>
+
+<option value="#4ade80">
+Green
+</option>
+
+</select>
+
+<!-- AI Model -->
+
+<label
+style="margin-top:20px;
+display:block;">
+AI Model
+</label>
+
+<select
+class="input"
+id="modelSelect">
+
+<option>
+Pollinations FREE
+</option>
+
+<option>
+GPT-4o
+</option>
+
+<option>
+Claude 3.7 Sonnet
+</option>
+
+<option>
+Gemini 1.5 Pro
+</option>
+
+<option>
+DeepSeek R1
+</option>
+
+</select>
+
+<!-- API Key -->
+
+<label
+style="margin-top:20px;
+display:block;">
+API Key
+</label>
+
+<input
+type="password"
+class="input"
+id="apiKey"
+placeholder="Paste API Key"
+/>
+
+<!-- Voice -->
+
+<label
+style="margin-top:20px;
+display:block;">
+Voice Gender
+</label>
+
+<select
+class="input"
+id="voiceGender">
+
+<option>
+Male
+</option>
+
+<option>
+Female
+</option>
+
+</select>
+
+<!-- Language -->
+
+<label
+style="margin-top:20px;
+display:block;">
+Language
+</label>
+
+<select
+class="input"
+id="languageSelect">
+
+<option>
+English
+</option>
+
+<option>
+Hindi
+</option>
+
+<option>
+Spanish
+</option>
+
+<option>
+French
+</option>
+
+<option>
+Japanese
+</option>
+
+</select>
+
+<button
+class="btn btn-primary"
+id="saveBtn">
+Save Settings
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+// Stars
+const stars =
+document.getElementById(
+"stars"
+);
+
+for(let i=0;i<80;i++){
+
+const star =
+document.createElement("div");
+
+star.classList.add("star");
+
+star.style.left =
+Math.random()*100+"%";
+
+star.style.top =
+Math.random()*100+"%";
+
+stars.appendChild(star);
+
+}
+
+// Elements
+const themeSelect =
+document.getElementById(
+"themeSelect"
+);
+
+const modelSelect =
+document.getElementById(
+"modelSelect"
+);
+
+const apiKey =
+document.getElementById(
+"apiKey"
+);
+
+const voiceGender =
+document.getElementById(
+"voiceGender"
+);
+
+const languageSelect =
+document.getElementById(
+"languageSelect"
+);
+
+// Load Saved Settings
+themeSelect.value =
+localStorage.getItem(
+"ruchika_color"
+) || "#8A2FFF";
+
+modelSelect.value =
+localStorage.getItem(
+"ruchika_ai_model"
+) || "Pollinations FREE";
+
+apiKey.value =
+localStorage.getItem(
+"ruchika_api_key"
+) || "";
+
+voiceGender.value =
+localStorage.getItem(
+"ruchika_voice_gender"
+) || "Male";
+
+languageSelect.value =
+localStorage.getItem(
+"ruchika_lang"
+) || "English";
+
+// Save Settings
+document.getElementById(
+"saveBtn"
+).addEventListener(
+"click",
+()=>{
+
+localStorage.setItem(
+"ruchika_color",
+themeSelect.value
+);
+
+localStorage.setItem(
+"ruchika_ai_model",
+modelSelect.value
+);
+
+localStorage.setItem(
+"ruchika_api_key",
+apiKey.value
+);
+
+localStorage.setItem(
+"ruchika_voice_gender",
+voiceGender.value
+);
+
+localStorage.setItem(
+"ruchika_lang",
+languageSelect.value
+);
+
+alert(
+"Settings Saved ✅"
+);
+
+}
+);
+
+</script>
+
+</body>
+</html>
