@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="manifest" href="manifest.json">
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/ruchika-ai/sw.js');
+  }
+  </script>
+<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#8A4FFF">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <meta charset="UTF-8" />
