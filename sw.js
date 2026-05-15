@@ -70,3 +70,7 @@ fetch(event.request);
 // Activate
 self.addEventListener(
 "activate",
+  
+self.addEventListener('fetch', function(event) {
+  event.respondWith(fetch(event.request));
+});
